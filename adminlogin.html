@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ADMIN LOGIN - GYAN ARJAN</title>
+  <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/backup.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1367876d04.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<style media="screen">
+  .navbar{
+      box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+  }
+  .menu_option {
+    margin-left: 5%;
+    padding-top: 2%;
+    text-decoration: none;
+    font-size: 15px;
+    color: #737373;
+    font-weight: 500;
+    font-family: 'Rubik';
+  }
+
+  .menu_option:hover {
+    color: tomato;
+    border-bottom: 3px solid tomato;
+    border-radius: 2px;
+    padding-bottom: 20px;
+  }
+
+  .active {
+    border-bottom: 3.5px solid tomato;
+    border-radius: 1.2px;
+    padding-bottom: 20px;
+  }
+
+  .register {
+    font-weight: 700;
+  }
+  .login{
+    padding-right:13px;
+    padding-left:13px;
+    font-size:15px;
+    background:#fa0644;
+  }
+  .container {
+vertical-align: middle;
+max-width: 1200px;
+width: 100%;
+background: white;
+box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin-top: 2%;
+border-radius: 3%;
+}
+.container1 {
+vertical-align: middle;
+max-width: 1200px;
+width: 100%;
+background: white;
+margin-top: 2%;
+border-right:2px;
+border-radius: 3%;
+padding:3% 5%;
+}
+body {
+margin:0;
+padding:0;
+font-family: sans-serif;
+background-image: url("../static/img/background.gif");
+background-repeat: no-repeat;
+  background-size: 1600px 725px;
+}
+
+.login-box {
+position: absolute;
+top: 55%;
+left: 50%;
+width: 500px;
+height: 515px;
+padding: 30px;
+transform: translate(-50%, -50%);
+box-sizing: border-box;
+box-shadow: 0 15px 25px rgba(0,0,0,.6);
+border-radius: 10px;
+}
+
+.login-box h5 {
+margin: 0 0 30px;
+padding: 0;
+color: black;
+font-weight: 500;
+}
+
+.login-box .user-box {
+position: relative;
+}
+
+.login-box .user-box input {
+width: 100%;
+padding: 10px 0;
+font-size: 16px;
+color: #277BC0;
+margin-bottom: 30px;
+border: none;
+border-bottom: 1px solid black;
+outline: none;
+background: transparent;
+}
+.login-box .user-box label {
+position: absolute;
+top:0;
+left: 0;
+padding: 10px 0;
+font-size: 16px;
+color: black;
+pointer-events: none;
+transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+top: -20px;
+left: 0;
+color: tomato;
+font-size: 13px;
+font-weight: bolder;
+}
+
+.login-box form a {
+position: relative;
+display: inline-block;
+padding: 10px 20px;
+color: tomato;
+font-size: 16px;
+text-decoration: none;
+text-transform: uppercase;
+overflow: hidden;
+transition: .5s;
+margin-top: 40px;
+letter-spacing: 4px
+}
+
+
+.login-box a span {
+position: absolute;
+display: block;
+}
+
+.login-box a span:nth-child(1) {
+top: 0;
+left: -100%;
+width: 100%;
+height: 2px;
+background: linear-gradient(90deg, transparent, #fa0644);
+animation: btn-anim1 1s linear infinite;
+}
+
+
+
+.login-box a span:nth-child(2) {
+top: -100%;
+right: 0;
+width: 2px;
+height: 100%;
+background: linear-gradient(180deg, transparent, #03e9f4);
+animation: btn-anim2 1s linear infinite;
+animation-delay: .25s
+}
+
+
+.login-box a span:nth-child(4) {
+bottom: -100%;
+left: 0;
+width: 2px;
+height: 100%;
+
+animation: btn-anim4 1s linear infinite;
+animation-delay: .75s
+}
+
+        .btnAction{
+            padding: 5px 45px 5px 45px;
+            background: #fa0644;
+            border: 0;
+            color: #FFF;
+            cursor: pointer;
+            margin-top: 15px;
+            width: max-content;
+            border-radius: 8px;
+						margin-left: 35%;
+font-weight:700;
+        }
+				
+</style>
+
+<body>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+
+
+    <div class="col-lg-3">
+      <a href="/studentlogin" style="text-decoration:none;font-weight:700;margin-left:5%;color:#494949;font-family: 'Rubik'"><i class="fa-regular fa-circle-left"></i>
+    BACK</a>
+    </div>
+    <div class="nav-brand col-lg-4">
+      <a href="/" class="navbar-brand"><img style="width:40% ;margin-right:2%;" src="static\img\logonew.jpeg"></a>
+  <!-- <a href="/" style=" text-decoration:none;font-size:20px;color:#363636; font-weight:600;    font-family: 'Rubik';
+  ">GYAN</a>
+  <a href="/" style=" text-decoration:none;font-size:20px;color:#fa0644; font-weight:600;    font-family: 'Rubik';
+  ">ARJAN</a> -->
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+  </nav>
+  <div class="login-box">
+<div class="form-row">
+  <div class="form-flex">
+    <img src="static\img\admin.png" style="width:80%;margin-left:10%;margin-bottom:25px"alt="">
+
+
+  </div>
+</div>
+
+  <form action="/adminlogin" method="post">
+    
+    <div class="user-box">
+      <input type="text" name="admin_email_id" required="">
+      <label>Admin Email-ID</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="admin_passcode" required="">
+      <label>Password</label>
+    </div>
+    
+      <button type="submit" class="btn btn-danger btnAction"name="button">LOGIN</button>
+
+  </form>
+  {% with messages=get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages%}
+          <b><p style="color: #fa0644; text-align: left;">{{ message }}</p></b>
+        {% endfor %}
+      {% endif %}
+  {% endwith %}
+	<div class="form-row" style="margin-top:15%">
+
+	<a href="#" style="color:grey ;margin-right:50%;text-decoration:none">Forgot Password?</a>
+
+		<a href="registration1.html" style="color:grey;text-decoration:none">Register</a>
+
+</div>
+
+
+</body>
+
+</html>

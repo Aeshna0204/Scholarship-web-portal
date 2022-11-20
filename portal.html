@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>PORTAL</title>
+  <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/backup.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1367876d04.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+  <script>
+        $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable span").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+  </script>
+<style media="screen">
+
+.container {
+vertical-align: middle;
+max-width: 1200px;
+width: 100%;
+background: white;
+box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin-top: 2%;
+border-radius: 3%;
+padding:2% 2%;
+margin-left:10%;
+
+}
+.container-nav {
+vertical-align: middle;
+max-width: 1200px;
+width: 100%;
+background: white;
+box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin-top: 1.5%;
+border-radius: 3%;
+padding:2% 2%;
+margin-left:10%;
+}
+.main-container{
+  background:#fa0644;
+  color:white;
+  font-weight:600;
+  margin-top:-1.3%;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-flex {
+  display: flex;
+}
+
+#steps-uid-0-p-0 .form-row,
+#steps-uid-0-p-0 .form-group,
+#steps-uid-0-p-0 .form-date {
+  width: 680px;
+}
+
+.form-flex {
+  margin: 0 -10px;
+}
+
+.form-flex .form-group {
+  width: 50%;
+  padding: 0 10px;
+}
+
+.form-group,
+.form-date {
+  margin-bottom: 18px;
+  position: relative;
+}
+.element{
+margin-left: 25px;
+}
+
+  .navbar{
+      box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+  }
+  .menu_option {
+    margin-left: 5%;
+    padding-top: 2%;
+    text-decoration: none;
+    font-size: 15px;
+    color: #737373;
+    font-weight: 500;
+    font-family: 'Rubik';
+  }
+
+  .menu_option:hover {
+    color: tomato;
+    border-bottom: 3px solid tomato;
+    border-radius: 2px;
+    padding-bottom: 20px;
+  }
+
+  .active {
+    border-bottom: 3.5px solid tomato;
+    border-radius: 1.2px;
+    padding-bottom: 20px;
+  }
+
+  .register {
+    font-weight: 700;
+  }
+  .login{
+    padding-right:13px;
+    padding-left:13px;
+    font-size:15px;
+    background:#fa0644;
+  }
+  .header-red,.content{
+    font-weight: bold;
+    color:white;
+    font-size: 15px;
+  }
+.header-red{
+  font-size: 18px;
+
+}
+.btn-light{
+  font-weight: bold;
+  color:black;
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+.title_container{
+  color:Black;
+  font-weight: bold;
+  font-style: 35px;
+  margin-left: 35%
+}
+.profile{
+  text-decoration:none;
+   padding-left: 45%;
+    padding-right: 25px;
+    font-size:30px;
+    color:#363636;
+    font-weight:600;
+}
+.profile :hover{
+    color:#fa0644;
+}
+
+
+.dropbtn {
+  background-color: #fa0644;
+  color: white;
+  padding:5px;
+  font-size: 12px;
+  margin-left:3%;
+  border: none;
+  font-weight:600;
+  border-radius:10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius:15px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight:600;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #fa0644;}
+.type{
+  color:#fa0644;
+  font-weight:bold;
+  margin-right:20%;
+}
+option{
+  font-weight:600;
+}
+option:hover{
+  font-weight:300;
+
+}
+.goverment{
+  background: #0096FF;
+  color:white;
+  margin-right:2%;
+  padding-left:15px;padding-right:15px;
+  padding-top:5px;
+  padding-bottom:5px;
+  border-radius:5px;
+  font-size:10px;
+}
+.description_title{
+  font-weight:600;
+  color:#363636;
+  font-size:15px;
+}
+.card-header{
+  background:white;
+  font-weight:bold;
+}
+.description_content{
+  font-size:12px;
+padding-right:35px;
+}
+.deadline{
+  font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <div class="nav-brand col-lg-3">
+      <a href="/portal" class="navbar-brand"><img style="width:40% ;margin-right:2%;" src="static\img\logonew.jpeg"></a>
+      <!-- <a href="/portal" style=" text-decoration:none;font-size:20px;color:#363636; font-weight:600;    font-family: 'Rubik';">GYAN</a>
+      <a href="/portal" style=" text-decoration:none;font-size:20px;color:#fa0644; font-weight:600;    font-family: 'Rubik';">ARJAN</a> -->
+    </div>
+    <div class="col-lg-4">
+      <a href="/" class="menu_option ">HOME</a>
+      <a href="/portal" class="menu_option active">SCHOLARSHIP</a>
+      <a href="#" class="menu_option">ABOUT US</a>
+    </div>
+    <div class="col-lg-2">
+      <a href="#" class="profile"><i class="fa-solid fa-circle-user"></i></a>
+    </div>
+  </nav>
+
+  <div class="container-nav">
+    <div class="form-row">
+      <div class="form-flex">
+       
+        <div class="col-lg-4">
+          <div class="form-outline">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" id="myInput"  style="border-radius:0px;border-radius:4px 0px 0px 4px"placeholder="Search here for scholarship" aria-label="Search">
+              <button class="btn btn-danger"  style="margin-left:-10px;border-radius:0px;border-radius:0px 4px 4px 0px"type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+            </form>
+          </div>
+        </div>
+       
+      <div></div>
+          <div class="col-lg-6">
+            <a href="http://127.0.0.1:5050/portal?type=GIRLS" class="menu_option ">GIRLS</a>
+            <a href="http://127.0.0.1:5050/portal?type=BOYS" class="menu_option active">BOYS</a>
+            <a href="http://127.0.0.1:5050/portal?ty=GOVT" class="menu_option " >GOVERMENT</a>
+            <a href="http://127.0.0.1:5050/portal?ty=PRIVATE" class="menu_option " >PRIVATE</a>
+            <a href="http://127.0.0.1:5050/portal?ty=COMMUNITY" class="menu_option " >COMMUNITY</a>
+            <a href="http://127.0.0.1:5050/portal" class="menu_option">ALL</a>
+          </div>
+      </div>
+    </div>
+</div>
+<ul>
+{% if obj|length==0 %}
+     <p>NO SCHOLARSHIP AVAILABLE</p>
+{% else %}
+
+{% for x in obj  %}
+<li id="myTable">
+<div class="container">
+  <div class="shadow-sm p-3 mb-5 bg-danger rounded main-container">
+    <div class="form-row">
+      <div class="form-flex">
+        <div class="col-lg-5">
+          <label>Name of Scholarship</label>
+        </div>
+        <div class="col-lg-2">
+          <label>Start Date</label>
+        </div>
+        <div class="col-lg-2">
+          <label>End Date</label>
+        </div>
+        <div class="col-lg-2">
+          <label>Eligibility</label>
+        </div>
+        <div class="col-lg-1">
+          <label>CASTE</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <label class="goverment">{{x.scholarship_type}}</label>
+      <label class="text-uppercase">{{x.scholarship_name}}</label>
+    </div>
+    <div class="card-body">
+      <div class=" form-row ">
+        <div class="form-flex">
+          <div class="col-lg-5">
+            <h5 class="description_title" >DESCRIPTION</h5>
+            <p id="" class="description_content">{{x.scholarship_description}}</p>
+          </div>
+          <div class="col-lg-2">
+            <label class="info-row" id="deadline" name="deadline">{{x.scholarship_start_date}}</label>
+          </div>
+          <div class="col-lg-2">
+            <label class="info-row" id="deadline" name="deadline">{{x.scholarship_end_date}}</label>
+          </div>
+          <div class="col-lg-2">
+            <label>{{x.scholarship_eligibility}}</label>
+          </div>
+          <div class="col-lg-1">
+            <label>{{x.scholarship_for_caste}}</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row" style="margin-top:1%">
+        <div class="form-flex">
+          <div class="col-lg-4">
+            <h5 class="description_title" >OFFERED IN REGION:</h5>
+            <p id="" class="description_content">{{x.scholarship_region}}</p>
+          </div>
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4">
+            <h5 class="description_title" >REWARDS:</h5>
+            <p id="" class="description_content">{{x.scholarship_rewards}}</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-row" style="margin-top:1%">
+        <div class="form-flex">
+          <div class="col-lg-4">
+            <h5 class="description_title" >OFFERED BY:</h5>
+            <p id="" class="description_content">{{x.scholarship_offered_by}}</p>
+          </div>
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4 form-flex">
+            <button type="button" style="margin-left:55%;width:125px;height:35px;margin-top:5%" class="btn btn-outline-dark" onclick="window.location.href ='{{x.scholarship_apply_link}}'">APPLY HERE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</li>
+{% endfor %}
+{% endif %}  
+</ul>
+</body>
+
+</html>

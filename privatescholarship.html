@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portal - Scholarship Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container my-3">
+        <h3 class="text-center">
+            All private scholarships
+            <br>
+            search bar <br>
+            filter by <br>
+            update delete button<br>
+            top 5 recommendation based on student data <br>
+            
+        </h3>
+    </div>
+
+    <div class="container my-3">
+        <h2>Private Scholarship info</h2>
+        {% if (private_scholarship_object|length) == 0 %}
+          <div class="alert alert-dark" role="alert">No Scholarship Found</div>
+        {% else %}
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Scholarship Name</th>
+                <th scope="col">Scholarship Type</th>
+                <th scope="col">Provider Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">WHATSAPP NUMBER</th>
+                <th scope="col">MOBILE NUMBER</th>
+                <th scope="col">EMAIL-ID</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Apply Link</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+              {% for anobject in all_scholarship_object %}
+                <tr>
+                  <th scope="row">{{ loop.index }}</th>
+                  <td>{{ anobject.sch_name }}</td>
+                  <td>{{ anobject.sch_type }}</td>
+                  <td>{{ anobject.sch_description }}</td>
+                  <td>{{ anobject.start_date }}</td>
+                  <td>{{ anobject.end_date }}</td>
+                  <td>{{ anobject.email_id }}</td>
+                  <td>{{ anobject.whatsapp_contact }}</td>
+                  <td>{{ anobject.mobile_contact }}</td>
+                  <td>{{ anobject.apply_link }}</td>
+                  <td>{{ anobject.person_name }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        {% endif %}
+      </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
